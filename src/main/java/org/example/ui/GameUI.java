@@ -33,7 +33,7 @@ public class GameUI extends VBox {
         restBtn.setOnAction(handler);
     }
 
-    GameUI(double money, HungerBar hungerBar) {
+    public GameUI(double money, HungerBar hungerBar) {
 
         // ── Top bar ──────────────────────────────────────────────────────
         Label playerName = new Label("Player  •  $" + money);
