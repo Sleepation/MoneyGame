@@ -35,7 +35,7 @@ public class MainUI extends VBox {
         return Double.parseDouble(moneyField.getText());
     }
 
-    MainUI(){
+    public MainUI(){
         Label title = new Label("How quickly can you lose money?");
         title.setFont(Font.font("Georgia", FontWeight.BOLD, 36));
         title.setTextFill(Color.web("#9A6C00"));

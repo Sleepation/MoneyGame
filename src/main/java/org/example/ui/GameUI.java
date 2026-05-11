@@ -23,6 +23,9 @@ public class GameUI extends VBox {
     private ActionButton eatBtn = new ActionButton(Action.EAT);
     private ActionButton bankBtn = new ActionButton(Action.BANK);
     private ActionButton restBtn = new ActionButton(Action.REST);
+    private Button forfeitBtn = new Button();
+    private EventHandler<ActionEvent> onForfeit;
+    private double currentMoney = 0;
 
     public void setOnRoll(EventHandler<ActionEvent> handler){
         workBtn.setOnAction(handler);
@@ -33,10 +36,15 @@ public class GameUI extends VBox {
         restBtn.setOnAction(handler);
     }
 
-    public GameUI(double money, HungerBar hungerBar) {
+    public void setOnForfeit(EventHandler<ActionEvent> handler){
+        onForfeit = handler;
+        forfeitBtn.setOnAction(onForfeit);
+    }
 
+    public GameUI(double money, HungerBar hungerBar) {
+        currentMoney = money;
         // ── Top bar ──────────────────────────────────────────────────────
-        Label playerName = new Label("Player  •  $" + money);
+        Label playerName = new Label("Player  •  $" + currentMoney);
         playerName.setFont(Font.font("Georgia", FontWeight.BOLD, 14));
         playerName.setTextFill(Color.web("#9A6C00"));
 
@@ -49,12 +57,16 @@ public class GameUI extends VBox {
         this.hungerBar = hungerBar;
 
         // ── Action buttons ───────────────────────────────────────────────
-        styledButton(workBtn, "Work",   200, 44);
-        styledButton(investBtn, "Invest", 200, 44);
-        styledButton(shopBtn, "Shop",   200, 44);
-        styledButton(eatBtn, "Eat",    200, 44);
-        styledButton(bankBtn, "Bank",   200, 44);
-        styledButton(restBtn, "Rest",   200, 44);
+        styleButton(forfeitBtn, "Forfeit", 100, 44);
+        forfeitBtn.setLayoutX(0);
+        forfeitBtn.setLayoutY(0);
+
+        styleButton(workBtn, "Work",   200, 44);
+        styleButton(investBtn, "Invest", 200, 44);
+        styleButton(shopBtn, "Shop",   200, 44);
+        styleButton(eatBtn, "Eat",    200, 44);
+        styleButton(bankBtn, "Bank",   200, 44);
+        styleButton(restBtn, "Rest",   200, 44);
 
         GridPane grid = new GridPane();
         grid.setHgap(12);
@@ -65,11 +77,13 @@ public class GameUI extends VBox {
         grid.add(bankBtn,   0, 2);  grid.add(restBtn,   1, 2);
 
         // ── Layout ───────────────────────────────────────────────────────
+        Pane forfeitPane = new Pane();
+        forfeitPane.getChildren().add(forfeitBtn);
         VBox center = new VBox(20, hungerBar, grid);
         center.setAlignment(Pos.CENTER);
         center.setPadding(new Insets(24));
 
-        this.getChildren().addAll(topBar, center);
+        this.getChildren().addAll(forfeitPane, topBar, center);
         this.setStyle("-fx-background-color: white;");
 
         hungerDrain = new Timeline(new KeyFrame(Duration.seconds(0.1), e -> hungerBar.drain(0.05)));
@@ -77,23 +91,26 @@ public class GameUI extends VBox {
         hungerDrain.play();
     }
 
-    private void startHungerDrain() {
+    public void startHungerDrain() {
         hungerDrain.play();
     }
 
-    private void stopHungerDrain(){
+    public void stopHungerDrain(){
         hungerDrain.stop();
+    }
+
+    public double getCurrentMoney(){
+        return currentMoney;
     }
 
 
 
 
-    private ActionButton styledButton(ActionButton btn, String text, double width, double height) {
+    private void styleButton(Button btn, String text, double width, double height) {
         btn.setText(text);
         btn.setFont(Font.font("Georgia", FontWeight.BOLD, 13));
         btn.setPrefWidth(width);
         btn.setPrefHeight(height);
         btn.getStyleClass().add("btn");
-        return btn;
     }
 }

@@ -10,14 +10,8 @@ import javafx.scene.text.*;
 import org.example.buttons.Action;
 
 public class RollUI extends VBox {
-    private EventHandler<ActionEvent> onBack;
 
-    public void setOnBack(EventHandler<ActionEvent> handler) {
-        this.onBack = handler;
-    }
-
-
-    public RollUI(Action action) {
+    public RollUI(Action action, EventHandler<ActionEvent> setOnBackHandler, EventHandler<ActionEvent> setOnResultHandler) {
         Label title = new Label("Pick a Number");
         title.setFont(Font.font("Georgia", FontWeight.BOLD, 20));
         title.setTextFill(Color.web("#9A6C00"));
@@ -28,9 +22,14 @@ public class RollUI extends VBox {
         for (int i = 1; i <= 6; i++) {
             Button btn = new Button(String.valueOf(i));
             btn.setFont(Font.font("Georgia", FontWeight.BOLD, 16));
+            btn.setId(String.valueOf(i));
             btn.setPrefWidth(60);
             btn.setPrefHeight(60);
             btn.getStyleClass().add("btn");
+
+            btn.setOnAction(setOnResultHandler);
+
+
             buttons.getChildren().add(btn);
         }
 
@@ -39,7 +38,7 @@ public class RollUI extends VBox {
         backBtn.setPrefWidth(100);
         backBtn.setPrefHeight(40);
         backBtn.getStyleClass().add("btn");
-        backBtn.setOnAction(e -> { if (onBack != null) onBack.handle(e); });
+        backBtn.setOnAction(setOnBackHandler);
 
         this.setSpacing(24);
         this.setAlignment(Pos.CENTER);
