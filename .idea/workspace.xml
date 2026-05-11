@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9646e70e-5fad-4959-9ae5-f0e4002c157c" name="Changes" comment="Fixed GameUI visibility to public">
+    <list default="true" id="9646e70e-5fad-4959-9ae5-f0e4002c157c" name="Changes" comment="Added ResultText">
       <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MainMenuInsaneAI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/ResultUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameInitialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameInitialization.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/info/ResultInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/info/ResultInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/GameUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/GameUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/MainUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/MainUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/RollUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/RollUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/ResultUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/ResultUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +141,7 @@
       <updated>1777478729221</updated>
       <workItem from="1778003272204" duration="17955000" />
       <workItem from="1778078256378" duration="7462000" />
-      <workItem from="1778464047582" duration="9858000" />
+      <workItem from="1778464047582" duration="12272000" />
     </task>
     <task id="LOCAL-00001" summary="Created basic Money Game. (Base structure works + some buttons are not clear)">
       <option name="closed" value="true" />
@@ -161,7 +159,23 @@
       <option name="project" value="LOCAL" />
       <updated>1778091697122</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added many classes (Made the game work for a specific button)">
+      <option name="closed" value="true" />
+      <created>1778475258690</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1778475258690</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added ResultText">
+      <option name="closed" value="true" />
+      <created>1778475277191</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1778475277191</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +195,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created basic Money Game. (Base structure works + some buttons are not clear)" />
     <MESSAGE value="Fixed GameUI visibility to public" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed GameUI visibility to public" />
+    <MESSAGE value="Added many classes (Made the game work for a specific button)" />
+    <MESSAGE value="Added ResultText" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ResultText" />
   </component>
 </project>

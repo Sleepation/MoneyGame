@@ -72,4 +72,70 @@ public class ResultInfo {
         }
         return "";
     }
+    public static double getLostMoney(Action action, int number) {
+        switch (action) {
+            case WORK -> {
+                switch (number) {
+                    case 1 -> { return 0; }
+                    case 2 -> { return 0; }
+                    case 3 -> { return 0; }
+                    case 4 -> { return 0; }
+                    case 5 -> { return 0; }
+                    case 6 -> { return 0; }
+                }
+            }
+            case INVEST -> {
+                switch (number) {
+                    case 1 -> { return 5; }
+                    case 2 -> { return 0; }
+                    case 3 -> { return 0; }
+                    case 4 -> { return 0; }
+                    case 5 -> { return 0; }
+                    case 6 -> { return 0; }
+                }
+            }
+            case SHOP -> {
+                switch (number) {
+                    case 1 -> { return 5; }
+                    case 2 -> { return 0; }
+                    case 3 -> { return 0; }
+                    case 4 -> { return 0; }
+                    case 5 -> { return 0; }
+                    case 6 -> { return 0; }
+                }
+            }
+            case EAT -> {
+                switch (number) {
+                    case 1 -> { return 5; }
+                    case 2 -> { return 0; }
+                    case 3 -> { return 0; }
+                    case 4 -> { return 0; }
+                    case 5 -> { return 0; }
+                    case 6 -> { return 0; }
+                }
+            }
+            case BANK -> {
+                switch (number) {
+                    case 1 -> { return 5; }
+                    case 2 -> { return 0; }
+                    case 3 -> { return 0; }
+                    case 4 -> { return 0; }
+                    case 5 -> { return 0; }
+                    case 6 -> { return 0; }
+                }
+            }
+            case REST -> {
+                switch (number) {
+                    case 1 -> { return 5; }
+                    case 2 -> { return 0; }
+                    case 3 -> { return 0; }
+                    case 4 -> { return 0; }
+                    case 5 -> { return 0; }
+                    case 6 -> { return 0; }
+                }
+            }
+        }
+        return 0;
+    }
+
 }

@@ -17,6 +17,7 @@ public class GameUI extends VBox {
 
     private final HungerBar hungerBar;
     private Timeline hungerDrain;
+    private Label playerName;
     private ActionButton workBtn = new ActionButton(Action.WORK);
     private ActionButton investBtn = new ActionButton(Action.INVEST);
     private ActionButton shopBtn = new ActionButton(Action.SHOP);
@@ -44,7 +45,7 @@ public class GameUI extends VBox {
     public GameUI(double money, HungerBar hungerBar) {
         currentMoney = money;
         // ── Top bar ──────────────────────────────────────────────────────
-        Label playerName = new Label("Player  •  $" + currentMoney);
+        this.playerName = new Label("Player  •  $" + currentMoney);
         playerName.setFont(Font.font("Georgia", FontWeight.BOLD, 14));
         playerName.setTextFill(Color.web("#9A6C00"));
 
@@ -101,6 +102,21 @@ public class GameUI extends VBox {
 
     public double getCurrentMoney(){
         return currentMoney;
+    }
+
+    public void loseMoney(double amount){
+        this.currentMoney -= amount;
+        if (currentMoney >= 0){
+            this.playerName.setText("Player  •  $" + currentMoney);
+        } else {
+            this.getChildren().clear();
+            forfeitBtn.setText("Game Over!");
+            //GET A SUMMARY OF WHAT WAS LOST!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+            this.getChildren().add(forfeitBtn);
+            this.setAlignment(Pos.CENTER);
+        }
+
     }
 
 

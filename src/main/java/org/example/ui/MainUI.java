@@ -1,15 +1,12 @@
 package org.example.ui;
 
-import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.*;
-import javafx.scene.*;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.scene.paint.*;
 import javafx.scene.text.*;
-import javafx.stage.*;
 
 
 //DONE :D
@@ -89,5 +86,12 @@ public class MainUI extends VBox {
 
 
         this.getChildren().addAll(title, subtitle, questionBox, playBtn, exitBtn);
+    }
+
+    public boolean isMoneyEmpty(){
+        if(moneyField.getText().equals("")){
+            return true;
+        }
+        return false;
     }
 }

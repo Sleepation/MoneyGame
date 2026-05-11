@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import org.example.buttons.Action;
 import org.example.buttons.ActionButton;
+import org.example.info.ResultInfo;
 import org.example.ui.*;
 
 
@@ -27,7 +28,7 @@ public class GameInitialization extends Application {
         mainUI = new MainUI();
         scene = new Scene(mainUI, 1000, 1000);
 
-        mainUI.setOnStartGame(e -> showGame());
+        mainUI.setOnStartGame(e -> {if (!mainUI.isMoneyEmpty())showGame();});
 
         mainUI.setOnExitGame(e -> {
             primaryStage.close();
@@ -69,7 +70,7 @@ public class GameInitialization extends Application {
     }
 
     private void showResult(Action action, int id){
-        resultUI = new ResultUI(action, id,  gameUI.getCurrentMoney(), hungerBar.getHunger(), hungerBar , e -> {scene.setRoot(gameUI); gameUI.startHungerDrain();});
+        resultUI = new ResultUI(action, id,  gameUI.getCurrentMoney(), hungerBar.getHunger(), hungerBar , e -> {scene.setRoot(gameUI); gameUI.startHungerDrain(); gameUI.loseMoney(ResultInfo.getLostMoney(action, id));});
         scene.setRoot(resultUI);
     }
 
