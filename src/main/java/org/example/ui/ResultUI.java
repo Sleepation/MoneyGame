@@ -11,7 +11,6 @@ import org.example.buttons.Action;
 import org.example.info.ResultInfo;
 
 public class ResultUI extends VBox {
-    private double lostMoney =0;
 
     public ResultUI(Action action, int number, double currentMoney, double currentHunger, HungerBar hungerBar, EventHandler<ActionEvent> setOnBackHandler) {
 
@@ -50,9 +49,5 @@ public class ResultUI extends VBox {
         this.setAlignment(Pos.CENTER);
         this.setStyle("-fx-background-color: white;");
         this.getChildren().addAll(title, actionLabel, resultLabel, moneyLabel, hungerLabel, backBtn);
-    }
-
-    public double getLostMoney() {
-        return lostMoney;
     }
 }
