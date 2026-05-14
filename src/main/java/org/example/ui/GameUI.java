@@ -13,9 +13,17 @@ import javafx.util.Duration;
 import org.example.buttons.Action;
 import org.example.buttons.ActionButton;
 
+import java.sql.Time;
+
 public class GameUI extends VBox {
 
-    private final HungerBar hungerBar;
+    private final StatBar appliancesAndTechnologyBar;
+    private final StatBar serviceBar;
+    private final StatBar transportBar;
+    private final StatBar hungerBar;
+    private Timeline appliancesAndTechnologyDrain;
+    private Timeline serviceDrain;
+    private Timeline transportDrain;
     private Timeline hungerDrain;
     private Label playerName;
     private ActionButton appliancesAndTechnologyBtn = new ActionButton(Action.A_T);
@@ -38,7 +46,7 @@ public class GameUI extends VBox {
         forfeitBtn.setOnAction(onForfeit);
     }
 
-    public GameUI(double money, HungerBar hungerBar) {
+    public GameUI(double money, StatBar appliancesAndTechnologyBar, StatBar serviceBar, StatBar transportBar, StatBar hungerBar) {
         currentMoney = money;
         // ── Top bar ──────────────────────────────────────────────────────
         this.playerName = new Label("Player  •  $" + currentMoney);
@@ -51,6 +59,9 @@ public class GameUI extends VBox {
         topBar.setStyle("-fx-background-color: #FFFDF5; -fx-border-color: #DAA520; -fx-border-width: 0 0 1 0;");
 
         // ── Hunger bar ───────────────────────────────────────────────────
+        this.appliancesAndTechnologyBar = appliancesAndTechnologyBar;
+        this.serviceBar = serviceBar;
+        this.transportBar = transportBar;
         this.hungerBar = hungerBar;
 
         // ── Action buttons ───────────────────────────────────────────────
@@ -73,24 +84,60 @@ public class GameUI extends VBox {
         // ── Layout ───────────────────────────────────────────────────────
         Pane forfeitPane = new Pane();
         forfeitPane.getChildren().add(forfeitBtn);
-        VBox center = new VBox(20, hungerBar, grid);
+        VBox center = new VBox(20, appliancesAndTechnologyBar, serviceBar, transportBar, hungerBar, grid);
         center.setAlignment(Pos.CENTER);
         center.setPadding(new Insets(24));
 
         this.getChildren().addAll(forfeitPane, topBar, center);
         this.setStyle("-fx-background-color: white;");
 
-        hungerDrain = new Timeline(new KeyFrame(Duration.seconds(0.1), e -> hungerBar.drain(0.05)));
-        hungerDrain.setCycleCount(Animation.INDEFINITE);
-        hungerDrain.play();
+        setTimeline(Action.A_T);
+        setTimeline(Action.SERVICE);
+        setTimeline(Action.TRANSPORT);
+        setTimeline(Action.EAT);
     }
 
-    public void startHungerDrain() {
-        hungerDrain.play();
+    private void setTimeline(Action action){
+        switch (action){
+            case A_T -> {
+                appliancesAndTechnologyDrain = new Timeline(new KeyFrame(Duration.seconds(0.1), e -> appliancesAndTechnologyBar.drain(0.05)));
+                appliancesAndTechnologyDrain.setCycleCount(Animation.INDEFINITE);
+                appliancesAndTechnologyDrain.play();
+            }
+            case SERVICE -> {
+                serviceDrain = new Timeline(new KeyFrame(Duration.seconds(0.1), e -> serviceBar.drain(0.05)));
+                serviceDrain.setCycleCount(Animation.INDEFINITE);
+                serviceDrain.play();
+            }
+            case TRANSPORT -> {
+                transportDrain = new Timeline(new KeyFrame(Duration.seconds(0.1), e -> transportBar.drain(0.05)));
+                transportDrain.setCycleCount(Animation.INDEFINITE);
+                transportDrain.play();
+            }
+            case EAT -> {
+                hungerDrain = new Timeline(new KeyFrame(Duration.seconds(0.1), e -> hungerBar.drain(0.05)));
+                hungerDrain.setCycleCount(Animation.INDEFINITE);
+                hungerDrain.play();
+            }
+        }
     }
 
-    public void stopHungerDrain(){
-        hungerDrain.stop();
+    public void startDrain(Action action) {
+        switch (action) {
+            case A_T        -> appliancesAndTechnologyDrain.play();
+            case SERVICE    -> serviceDrain.play();
+            case TRANSPORT  -> transportDrain.play();
+            case EAT        -> hungerDrain.play();
+        }
+    }
+
+    public void stopDrain(Action action) {
+        switch (action) {
+            case A_T        -> appliancesAndTechnologyDrain.stop();
+            case SERVICE    -> serviceDrain.stop();
+            case TRANSPORT  -> transportDrain.stop();
+            case EAT        -> hungerDrain.stop();
+        }
     }
 
     public double getCurrentMoney(){

@@ -1,12 +1,12 @@
 package org.example.info;
 
 import org.example.buttons.Action;
-import org.example.ui.HungerBar;
+import org.example.ui.StatBar;
 
 public class ResultInfo {
 
 
-    public static String getInfo(Action action, int number, HungerBar hungerBar) {
+    public static String getInfo(Action action, int number, StatBar hungerBar) {
         switch (action) {
             case A_T -> {
                 switch (number) {

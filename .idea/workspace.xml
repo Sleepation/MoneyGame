@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9646e70e-5fad-4959-9ae5-f0e4002c157c" name="Changes" comment="Removed lost money from ResultUI as it was not necessary">
+    <list default="true" id="9646e70e-5fad-4959-9ae5-f0e4002c157c" name="Changes" comment="Added research text">
       <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MainMenuInsaneAI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/DrainType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/buttons/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/buttons/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameInitialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameInitialization.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/info/ResultInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/info/ResultInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/info/ResultText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/info/ResultText.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/GameUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/GameUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/HungerBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/StatBar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/ResultUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/ResultUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -143,7 +146,8 @@
       <workItem from="1778464047582" duration="12375000" />
       <workItem from="1778521762292" duration="3447000" />
       <workItem from="1778636722699" duration="1009000" />
-      <workItem from="1778694541171" duration="6365000" />
+      <workItem from="1778694541171" duration="6392000" />
+      <workItem from="1778797615421" duration="3650000" />
     </task>
     <task id="LOCAL-00001" summary="Created basic Money Game. (Base structure works + some buttons are not clear)">
       <option name="closed" value="true" />
@@ -201,7 +205,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778478617169</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added research text">
+      <option name="closed" value="true" />
+      <created>1778739608292</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1778739608292</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +237,7 @@
     <MESSAGE value="Added ResultText" />
     <MESSAGE value="Changed things" />
     <MESSAGE value="Removed lost money from ResultUI as it was not necessary" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed lost money from ResultUI as it was not necessary" />
+    <MESSAGE value="Added research text" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added research text" />
   </component>
 </project>

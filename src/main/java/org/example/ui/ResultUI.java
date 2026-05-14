@@ -12,7 +12,7 @@ import org.example.info.ResultInfo;
 
 public class ResultUI extends VBox {
 
-    public ResultUI(Action action, int number, double currentMoney, double currentHunger, HungerBar hungerBar, EventHandler<ActionEvent> setOnBackHandler) {
+    public ResultUI(Action action, int number, double currentMoney, double currentHunger, StatBar hungerBar, EventHandler<ActionEvent> setOnBackHandler) {
 
         Label title = new Label("Result");
         title.setFont(Font.font("Georgia", FontWeight.BOLD, 20));
