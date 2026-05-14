@@ -18,23 +18,19 @@ public class GameUI extends VBox {
     private final HungerBar hungerBar;
     private Timeline hungerDrain;
     private Label playerName;
-    private ActionButton workBtn = new ActionButton(Action.WORK);
-    private ActionButton investBtn = new ActionButton(Action.INVEST);
-    private ActionButton shopBtn = new ActionButton(Action.SHOP);
+    private ActionButton appliancesAndTechnologyBtn = new ActionButton(Action.A_T);
+    private ActionButton serviceBtn = new ActionButton(Action.SERVICE);
+    private ActionButton transportBtn = new ActionButton(Action.TRANSPORT);
     private ActionButton eatBtn = new ActionButton(Action.EAT);
-    private ActionButton bankBtn = new ActionButton(Action.BANK);
-    private ActionButton restBtn = new ActionButton(Action.REST);
     private Button forfeitBtn = new Button();
     private EventHandler<ActionEvent> onForfeit;
     private double currentMoney = 0;
 
     public void setOnRoll(EventHandler<ActionEvent> handler){
-        workBtn.setOnAction(handler);
-        investBtn.setOnAction(handler);
-        shopBtn.setOnAction(handler);
+        appliancesAndTechnologyBtn.setOnAction(handler);
+        serviceBtn.setOnAction(handler);
+        transportBtn.setOnAction(handler);
         eatBtn.setOnAction(handler);
-        bankBtn.setOnAction(handler);
-        restBtn.setOnAction(handler);
     }
 
     public void setOnForfeit(EventHandler<ActionEvent> handler){
@@ -62,20 +58,17 @@ public class GameUI extends VBox {
         forfeitBtn.setLayoutX(0);
         forfeitBtn.setLayoutY(0);
 
-        styleButton(workBtn, "Work",   200, 44);
-        styleButton(investBtn, "Invest", 200, 44);
-        styleButton(shopBtn, "Shop",   200, 44);
-        styleButton(eatBtn, "Eat",    200, 44);
-        styleButton(bankBtn, "Bank",   200, 44);
-        styleButton(restBtn, "Rest",   200, 44);
+        styleButton(appliancesAndTechnologyBtn, "Appliances & Technology",   200, 44);
+        styleButton(serviceBtn, "Service", 200, 44);
+        styleButton(transportBtn, "Transport",   200, 44);
+        styleButton(eatBtn, "Food",    200, 44);
 
         GridPane grid = new GridPane();
         grid.setHgap(12);
         grid.setVgap(12);
         grid.setAlignment(Pos.CENTER);
-        grid.add(workBtn,   0, 0);  grid.add(investBtn, 1, 0);
-        grid.add(shopBtn,   0, 1);  grid.add(eatBtn,    1, 1);
-        grid.add(bankBtn,   0, 2);  grid.add(restBtn,   1, 2);
+        grid.add(appliancesAndTechnologyBtn,   0, 0);  grid.add(serviceBtn, 1, 0);
+        grid.add(transportBtn,   0, 1);  grid.add(eatBtn,    1, 1);
 
         // ── Layout ───────────────────────────────────────────────────────
         Pane forfeitPane = new Pane();

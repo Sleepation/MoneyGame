@@ -8,65 +8,50 @@ public class ResultInfo {
 
     public static String getInfo(Action action, int number, HungerBar hungerBar) {
         switch (action) {
-            case WORK -> {
+            case A_T -> {
                 switch (number) {
-                    case 1 -> { return "Bad day at work. You earned $100."; }
-                    case 2 -> { return "Slow day. You earned $200."; }
-                    case 3 -> { return "Average day. You earned $300."; }
-                    case 4 -> { return "Good day. You earned $400."; }
-                    case 5 -> { return "Great day! You earned $500."; }
-                    case 6 -> { return "Promotion! You earned $600."; }
+                    case 1 -> { return ResultText.A_T_1; }
+                    case 2 -> { return ResultText.A_T_2; }
+                    case 3 -> { return ResultText.A_T_3; }
+                    case 4 -> { return ResultText.A_T_4; }
+                    case 5 -> { return ResultText.A_T_5; }
+                    case 6 -> { return ResultText.A_T_6; }
                 }
             }
-            case INVEST -> {
+            case SERVICE -> {
                 switch (number) {
-                    case 1 -> { return "Market crashed. You lost $200."; }
-                    case 2 -> { return "Bad investment. You lost $100."; }
-                    case 3 -> { return "Break even. Nothing gained."; }
-                    case 4 -> { return "Small return. You gained $150."; }
-                    case 5 -> { return "Good return. You gained $300."; }
-                    case 6 -> { return "Jackpot! You gained $500."; }
+                    case 1 -> { return ResultText.SERVICE_1; }
+                    case 2 -> { return ResultText.SERVICE_2; }
+                    case 3 -> { return ResultText.SERVICE_3; }
+                    case 4 -> { return ResultText.SERVICE_4; }
+                    case 5 -> { return ResultText.SERVICE_5; }
+                    case 6 -> { return ResultText.SERVICE_6; }
                 }
             }
-            case SHOP -> {
+            case TRANSPORT -> {
                 switch (number) {
-                    case 1 -> { return "Nothing useful. You spent $50."; }
-                    case 2 -> { return "Basic supplies. You spent $100."; }
-                    case 3 -> { return "Decent haul. You spent $150."; }
-                    case 4 -> { return "Good deal. You spent $100 and got a bonus."; }
-                    case 5 -> { return "Great find! You spent $50 and got a big bonus."; }
-                    case 6 -> { return "Mega sale! You spent nothing and got a bonus."; }
+                    case 1 -> { return ResultText.TRANSPORT_1; }
+                    case 2 -> { return ResultText.TRANSPORT_2; }
+                    case 3 -> { return ResultText.TRANSPORT_3; }
+                    case 4 -> { return ResultText.TRANSPORT_4; }
+                    case 5 -> { return ResultText.TRANSPORT_5; }
+                    case 6 -> { return ResultText.TRANSPORT_6; }
                 }
             }
             case EAT -> {
                 switch (number) {
                     case 1 -> { hungerBar.feed(0);
                         return ResultText.EAT_1; }
-                    case 2 -> { return "Small snack. Hunger +20."; }
-                    case 3 -> { return "Decent meal. Hunger +30."; }
-                    case 4 -> { return "Good meal. Hunger +40."; }
-                    case 5 -> { return "Great feast! Hunger +50."; }
-                    case 6 -> { return "Banquet! Hunger fully restored."; }
-                }
-            }
-            case BANK -> {
-                switch (number) {
-                    case 1 -> { return "Bank fee charged. You lost $50."; }
-                    case 2 -> { return "Low interest. You gained $20."; }
-                    case 3 -> { return "Standard interest. You gained $50."; }
-                    case 4 -> { return "Good interest. You gained $100."; }
-                    case 5 -> { return "High yield! You gained $200."; }
-                    case 6 -> { return "Bonus rate! You gained $400."; }
-                }
-            }
-            case REST -> {
-                switch (number) {
-                    case 1 -> { return "Poor sleep. No benefit."; }
-                    case 2 -> { return "Light rest. Slight recovery."; }
-                    case 3 -> { return "Decent sleep. Hunger +10."; }
-                    case 4 -> { return "Good rest. Hunger +20."; }
-                    case 5 -> { return "Great sleep! Hunger +30."; }
-                    case 6 -> { return "Perfect rest! Full recovery."; }
+                    case 2 -> { hungerBar.feed(20);
+                        return ResultText.EAT_2; }
+                    case 3 -> { hungerBar.feed(10);
+                        return ResultText.EAT_3; }
+                    case 4 -> { hungerBar.feed(7.5);
+                        return ResultText.EAT_4; }
+                    case 5 -> { hungerBar.feed(10);
+                        return ResultText.EAT_5;}
+                    case 6 -> { hungerBar.feed(20);
+                        return ResultText.EAT_6; }
                 }
             }
         }
@@ -74,64 +59,44 @@ public class ResultInfo {
     }
     public static double getLostMoney(Action action, int number) {
         switch (action) {
-            case WORK -> {
+            case A_T -> {
                 switch (number) {
-                    case 1 -> { return 0; }
-                    case 2 -> { return 0; }
-                    case 3 -> { return 0; }
-                    case 4 -> { return 0; }
-                    case 5 -> { return 0; }
+                    case 1 -> { return 3000; }
+                    case 2 -> { return 1500; }
+                    case 3 -> { return 500; }
+                    case 4 -> { return 300; }
+                    case 5 -> { return 1000; }
+                    case 6 -> { return 1000; }
+                }
+            }
+            case SERVICE -> {
+                switch (number) {
+                    case 1 -> { return 150; }
+                    case 2 -> { return 50; }
+                    case 3 -> { return 50; }
+                    case 4 -> { return 50; }
+                    case 5 -> { return 10; }
                     case 6 -> { return 0; }
                 }
             }
-            case INVEST -> {
+            case TRANSPORT -> {
                 switch (number) {
-                    case 1 -> { return 5; }
-                    case 2 -> { return 0; }
-                    case 3 -> { return 0; }
-                    case 4 -> { return 0; }
-                    case 5 -> { return 0; }
-                    case 6 -> { return 0; }
-                }
-            }
-            case SHOP -> {
-                switch (number) {
-                    case 1 -> { return 5; }
-                    case 2 -> { return 0; }
-                    case 3 -> { return 0; }
-                    case 4 -> { return 0; }
-                    case 5 -> { return 0; }
-                    case 6 -> { return 0; }
+                    case 1 -> { return 6000; }
+                    case 2 -> { return 5000; }
+                    case 3 -> { return 1000; }
+                    case 4 -> { return 4000; }
+                    case 5 -> { return 200; }
+                    case 6 -> { return 150; }
                 }
             }
             case EAT -> {
                 switch (number) {
                     case 1 -> { return 5; }
-                    case 2 -> { return 0; }
-                    case 3 -> { return 0; }
-                    case 4 -> { return 0; }
-                    case 5 -> { return 0; }
-                    case 6 -> { return 0; }
-                }
-            }
-            case BANK -> {
-                switch (number) {
-                    case 1 -> { return 5; }
-                    case 2 -> { return 0; }
-                    case 3 -> { return 0; }
-                    case 4 -> { return 0; }
-                    case 5 -> { return 0; }
-                    case 6 -> { return 0; }
-                }
-            }
-            case REST -> {
-                switch (number) {
-                    case 1 -> { return 5; }
-                    case 2 -> { return 0; }
-                    case 3 -> { return 0; }
-                    case 4 -> { return 0; }
-                    case 5 -> { return 0; }
-                    case 6 -> { return 0; }
+                    case 2 -> { return 60; }
+                    case 3 -> { return 20; }
+                    case 4 -> { return 10; }
+                    case 5 -> { return 15; }
+                    case 6 -> { return 10; }
                 }
             }
         }
