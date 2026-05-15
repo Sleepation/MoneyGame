@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9646e70e-5fad-4959-9ae5-f0e4002c157c" name="Changes" comment="Added GameOver Screen">
+    <list default="true" id="9646e70e-5fad-4959-9ae5-f0e4002c157c" name="Changes" comment="Added Styling">
       <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MainMenuInsaneAI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/buttons/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/buttons/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameInitialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameInitialization.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/info/ResultInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/info/ResultInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/info/ResultText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/info/ResultText.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/GameOverUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/GameOverUI.java" afterDir="false" />
@@ -40,26 +40,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.GameInitialization.executor&quot;: &quot;Run&quot;,
-    &quot;Application.GameMenu.executor&quot;: &quot;Run&quot;,
-    &quot;Application.GameUI.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainMenu.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainMenuInsaneAI.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/thoma/IdeaProjects/MoneyGame&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.GameInitialization.executor": "Run",
+    "Application.GameMenu.executor": "Run",
+    "Application.GameUI.executor": "Run",
+    "Application.MainMenu.executor": "Run",
+    "Application.MainMenuInsaneAI.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/thoma/IdeaProjects/MoneyGame/src/main/resources/image",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\thoma\IdeaProjects\MoneyGame\src\main\resources\image" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.example" />
     </key>
@@ -148,7 +151,7 @@
       <workItem from="1778521762292" duration="3447000" />
       <workItem from="1778636722699" duration="1009000" />
       <workItem from="1778694541171" duration="6392000" />
-      <workItem from="1778797615421" duration="13032000" />
+      <workItem from="1778797615421" duration="16250000" />
     </task>
     <task id="LOCAL-00001" summary="Created basic Money Game. (Base structure works + some buttons are not clear)">
       <option name="closed" value="true" />
@@ -238,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778811503353</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added Styling">
+      <option name="closed" value="true" />
+      <created>1778818463043</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1778818463043</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +277,7 @@
     <MESSAGE value="Added other bars for other buttons" />
     <MESSAGE value="Made bars go to 0 create game over" />
     <MESSAGE value="Added GameOver Screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added GameOver Screen" />
+    <MESSAGE value="Added Styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Styling" />
   </component>
 </project>

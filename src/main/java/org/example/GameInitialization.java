@@ -49,6 +49,7 @@ public class GameInitialization extends Application {
 
         primaryStage.setScene(scene);
         primaryStage.setTitle("Money Game");
+        primaryStage.setFullScreen(true);
         primaryStage.show();
 
     }
@@ -94,7 +95,29 @@ public class GameInitialization extends Application {
         rollHistory.add(entry);
 
 
-        resultUI = new ResultUI(action, id,  gameUI.getCurrentMoney(), hungerBar.getValue(), hungerBar , e -> {scene.setRoot(gameUI); gameUI.startDrain(action); gameUI.loseMoney(ResultInfo.getLostMoney(action, id));});
+        double currentValue = 0;
+        StatBar currentBar = null;
+
+        switch (action){
+            case FOOD -> {
+                currentValue = hungerBar.getValue();
+                currentBar = hungerBar;
+            }
+            case APPLIANCES_TECHNOLOGY -> {
+                currentValue = appliancesAndTechnologyBar.getValue();
+                currentBar = appliancesAndTechnologyBar;
+            }
+            case SERVICE -> {
+                currentValue = serviceBar.getValue();
+                currentBar = serviceBar;
+            }
+            case TRANSPORT -> {
+                currentValue = transportBar.getValue();
+                currentBar = transportBar;
+            }
+        }
+
+        resultUI = new ResultUI(action, id,  gameUI.getCurrentMoney(), currentValue, currentBar, e -> {scene.setRoot(gameUI); gameUI.startDrain(action); gameUI.loseMoney(ResultInfo.getLostMoney(action, id));});
         scene.setRoot(resultUI);
     }
 

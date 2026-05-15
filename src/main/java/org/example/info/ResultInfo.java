@@ -6,51 +6,69 @@ import org.example.ui.StatBar;
 public class ResultInfo {
 
 
-    public static String getInfo(Action action, int number, StatBar hungerBar) {
+    public static String getInfo(Action action, int number, StatBar bar) {
         switch (action) {
             case APPLIANCES_TECHNOLOGY -> {
                 switch (number) {
-                    case 1 -> { return ResultText.APPLIANCES_TECHNOLOGY_1; }
-                    case 2 -> { return ResultText.APPLIANCES_TECHNOLOGY_2; }
-                    case 3 -> { return ResultText.APPLIANCES_TECHNOLOGY_3; }
-                    case 4 -> { return ResultText.APPLIANCES_TECHNOLOGY_4; }
-                    case 5 -> { return ResultText.APPLIANCES_TECHNOLOGY_5; }
-                    case 6 -> { return ResultText.APPLIANCES_TECHNOLOGY_6; }
+                    case 1 -> { bar.feed(50);
+                        return ResultText.APPLIANCES_TECHNOLOGY_1; }
+                    case 2 -> { bar.feed(50);
+                        return ResultText.APPLIANCES_TECHNOLOGY_2; }
+                    case 3 -> { bar.feed(50);
+                        return ResultText.APPLIANCES_TECHNOLOGY_3; }
+                    case 4 -> { bar.feed(50);
+                        return ResultText.APPLIANCES_TECHNOLOGY_4; }
+                    case 5 -> { bar.feed(50);
+                        return ResultText.APPLIANCES_TECHNOLOGY_5; }
+                    case 6 -> { bar.feed(50);
+                        return ResultText.APPLIANCES_TECHNOLOGY_6; }
                 }
             }
             case SERVICE -> {
                 switch (number) {
-                    case 1 -> { return ResultText.SERVICE_1; }
-                    case 2 -> { return ResultText.SERVICE_2; }
-                    case 3 -> { return ResultText.SERVICE_3; }
-                    case 4 -> { return ResultText.SERVICE_4; }
-                    case 5 -> { return ResultText.SERVICE_5; }
-                    case 6 -> { return ResultText.SERVICE_6; }
+                    case 1 -> { bar.feed(50);
+                        return ResultText.SERVICE_1; }
+                    case 2 -> { bar.feed(40);
+                        return ResultText.SERVICE_2; }
+                    case 3 -> { bar.feed(30);
+                        return ResultText.SERVICE_3; }
+                    case 4 -> { bar.feed(30);
+                        return ResultText.SERVICE_4; }
+                    case 5 -> { bar.feed(30);
+                        return ResultText.SERVICE_5; }
+                    case 6 -> { bar.feed(30);
+                        return ResultText.SERVICE_6; }
                 }
             }
             case TRANSPORT -> {
                 switch (number) {
-                    case 1 -> { return ResultText.TRANSPORT_1; }
-                    case 2 -> { return ResultText.TRANSPORT_2; }
-                    case 3 -> { return ResultText.TRANSPORT_3; }
-                    case 4 -> { return ResultText.TRANSPORT_4; }
-                    case 5 -> { return ResultText.TRANSPORT_5; }
-                    case 6 -> { return ResultText.TRANSPORT_6; }
+                    case 1 -> { bar.feed(50);
+                        return ResultText.TRANSPORT_1; }
+                    case 2 -> { bar.feed(50);
+                        return ResultText.TRANSPORT_2; }
+                    case 3 -> { bar.feed(50);
+                        return ResultText.TRANSPORT_3; }
+                    case 4 -> { bar.feed(20);
+                        return ResultText.TRANSPORT_4; }
+                    case 5 -> { bar.feed(30);
+                        return ResultText.TRANSPORT_5; }
+                    case 6 -> { bar.feed(30);
+                        return ResultText.TRANSPORT_6; }
                 }
             }
             case FOOD -> {
                 switch (number) {
-                    case 1 -> { hungerBar.feed(0);
+                    case 1 -> { bar.feed(0);
                         return ResultText.FOOD_1; }
-                    case 2 -> { hungerBar.feed(20);
+                    case 2 -> { bar.feed(20);
                         return ResultText.FOOD_2; }
-                    case 3 -> { hungerBar.feed(10);
+                    case 3 -> { bar.feed(10);
                         return ResultText.FOOD_3; }
-                    case 4 -> { hungerBar.feed(7.5);
+                    case 4 -> { bar.feed(7.5);
                         return ResultText.FOOD_4; }
-                    case 5 -> { hungerBar.feed(10);
+                    case 5 -> { bar.feed(10);
                         return ResultText.FOOD_5;}
-                    case 6 -> { hungerBar.feed(20);
+                    case 6 -> { bar.feed(20);
                         return ResultText.FOOD_6; }
                 }
             }

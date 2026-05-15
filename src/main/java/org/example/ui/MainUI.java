@@ -9,8 +9,6 @@ import javafx.scene.paint.*;
 import javafx.scene.text.*;
 
 
-//DONE :D
-//10K IS LIMIT
 public class MainUI extends VBox {
 
     private Button playBtn = new Button("▶  Play Now");
@@ -93,7 +91,7 @@ public class MainUI extends VBox {
         this.setSpacing(16);
         this.setAlignment(Pos.CENTER);
         this.setPadding(new Insets(40));
-        this.setStyle("-fx-background-color: white;");
+        this.setStyle("-fx-background-color: #FAF7F0;");
 
 
         this.getChildren().addAll(title, subtitle, questionBox, playBtn, exitBtn);

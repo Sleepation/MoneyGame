@@ -42,7 +42,7 @@ public class RollUI extends VBox {
 
         this.setSpacing(24);
         this.setAlignment(Pos.CENTER);
-        this.setStyle("-fx-background-color: white;");
+        this.setStyle("-fx-background-color: #FAF7F0;");
         this.getChildren().addAll(title, buttons, backBtn);
     }
 }

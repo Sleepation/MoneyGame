@@ -94,7 +94,7 @@ public class GameUI extends VBox {
         center.setPadding(new Insets(24));
 
         this.getChildren().addAll(forfeitPane, topBar, center);
-        this.setStyle("-fx-background-color: white;");
+        this.setStyle("-fx-background-color: #FAF7F0;");
 
         setTimeline(Action.APPLIANCES_TECHNOLOGY);
         setTimeline(Action.SERVICE);
@@ -108,7 +108,7 @@ public class GameUI extends VBox {
                 appliancesAndTechnologyDrain = new Timeline(
                         new KeyFrame(Duration.seconds(0.1), e -> {
 
-                            appliancesAndTechnologyBar.drain(0.05);
+                            appliancesAndTechnologyBar.drain(0.1);
 
                             if (appliancesAndTechnologyBar.getValue() <= 0) {
                                 createGameOver();
@@ -124,7 +124,7 @@ public class GameUI extends VBox {
                 serviceDrain = new Timeline(
                         new KeyFrame(Duration.seconds(0.1), e -> {
 
-                            serviceBar.drain(0.05);
+                            serviceBar.drain(0.1);
 
                             if (serviceBar.getValue() <= 0) {
                                 createGameOver();
@@ -140,7 +140,7 @@ public class GameUI extends VBox {
                 transportDrain = new Timeline(
                         new KeyFrame(Duration.seconds(0.1), e -> {
 
-                            transportBar.drain(0.05);
+                            transportBar.drain(0.1);
 
                             if (transportBar.getValue() <= 0) {
                                 createGameOver();
@@ -156,7 +156,7 @@ public class GameUI extends VBox {
                 hungerDrain = new Timeline(
                         new KeyFrame(Duration.seconds(0.1), e -> {
 
-                            hungerBar.drain(0.05);
+                            hungerBar.drain(0.1);
 
                             if (hungerBar.getValue() <= 0) {
                                 createGameOver();

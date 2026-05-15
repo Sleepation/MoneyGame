@@ -57,7 +57,7 @@ public class GameOverUI extends VBox {
         this.setSpacing(20);
         this.setAlignment(Pos.CENTER);
         this.setPadding(new Insets(40));
-        this.setStyle("-fx-background-color: white;");
+        this.setStyle("-fx-background-color: #FAF7F0;");
         this.getChildren().addAll(title, moneyLabel, historyTitle, scroll, restartBtn);
     }
 }
