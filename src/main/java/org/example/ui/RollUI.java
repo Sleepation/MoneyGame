@@ -12,7 +12,7 @@ import org.example.buttons.Action;
 public class RollUI extends VBox {
 
     public RollUI(Action action, EventHandler<ActionEvent> setOnBackHandler, EventHandler<ActionEvent> setOnResultHandler) {
-        Label title = new Label("Pick a Number");
+        Label title = new Label("Roll a Number");
         title.setFont(Font.font("Georgia", FontWeight.BOLD, 20));
         title.setTextFill(Color.web("#9A6C00"));
 

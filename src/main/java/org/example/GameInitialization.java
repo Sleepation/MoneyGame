@@ -60,7 +60,10 @@ public class GameInitialization extends Application {
         //Rolling
         gameUI.setOnRoll(e -> {
             Action action = ((ActionButton)e.getSource()).getAction();
-            gameUI.stopDrain(action);
+            gameUI.stopDrain(Action.APPLIANCES_TECHNOLOGY);
+            gameUI.stopDrain(Action.SERVICE);
+            gameUI.stopDrain(Action.TRANSPORT);
+            gameUI.stopDrain(Action.FOOD);
             showRoll(action);
         });
 
@@ -117,7 +120,13 @@ public class GameInitialization extends Application {
             }
         }
 
-        resultUI = new ResultUI(action, id,  gameUI.getCurrentMoney(), currentValue, currentBar, e -> {scene.setRoot(gameUI); gameUI.startDrain(action); gameUI.loseMoney(ResultInfo.getLostMoney(action, id));});
+        resultUI = new ResultUI(action, id,  gameUI.getCurrentMoney(), currentValue, currentBar,
+                e -> {scene.setRoot(gameUI);
+                    gameUI.startDrain(Action.APPLIANCES_TECHNOLOGY);
+                    gameUI.startDrain(Action.SERVICE);
+                    gameUI.startDrain(Action.TRANSPORT);
+                    gameUI.startDrain(Action.FOOD);
+            gameUI.loseMoney(ResultInfo.getLostMoney(action, id));});
         scene.setRoot(resultUI);
     }
 
