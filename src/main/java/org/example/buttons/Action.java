@@ -1,5 +1,5 @@
 package org.example.buttons;
 
 public enum Action {
-    A_T, SERVICE, TRANSPORT, EAT
+    APPLIANCES_TECHNOLOGY, SERVICE, TRANSPORT, FOOD
 }

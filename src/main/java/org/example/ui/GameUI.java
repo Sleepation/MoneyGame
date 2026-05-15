@@ -13,8 +13,6 @@ import javafx.util.Duration;
 import org.example.buttons.Action;
 import org.example.buttons.ActionButton;
 
-import java.sql.Time;
-
 public class GameUI extends VBox {
 
     private final StatBar appliancesAndTechnologyBar;
@@ -26,10 +24,10 @@ public class GameUI extends VBox {
     private Timeline transportDrain;
     private Timeline hungerDrain;
     private Label playerName;
-    private ActionButton appliancesAndTechnologyBtn = new ActionButton(Action.A_T);
+    private ActionButton appliancesAndTechnologyBtn = new ActionButton(Action.APPLIANCES_TECHNOLOGY);
     private ActionButton serviceBtn = new ActionButton(Action.SERVICE);
     private ActionButton transportBtn = new ActionButton(Action.TRANSPORT);
-    private ActionButton eatBtn = new ActionButton(Action.EAT);
+    private ActionButton eatBtn = new ActionButton(Action.FOOD);
     private Button forfeitBtn = new Button();
     private EventHandler<ActionEvent> onForfeit;
     private double currentMoney = 0;
@@ -72,14 +70,14 @@ public class GameUI extends VBox {
         this.hungerBar = hungerBar;
 
         // ── Action buttons ───────────────────────────────────────────────
-        styleButton(forfeitBtn, "Forfeit", 100, 44);
+        styleButton(forfeitBtn, "Forfeit", 200, 44);
         forfeitBtn.setLayoutX(0);
         forfeitBtn.setLayoutY(0);
 
-        styleButton(appliancesAndTechnologyBtn, "Appliances & Technology",   200, 44);
-        styleButton(serviceBtn, "Service", 200, 44);
-        styleButton(transportBtn, "Transport",   200, 44);
-        styleButton(eatBtn, "Food",    200, 44);
+        styleButton(appliancesAndTechnologyBtn, "Appliances & Technology",   400, 88);
+        styleButton(serviceBtn, "Service", 400, 88);
+        styleButton(transportBtn, "Transport",   400, 88);
+        styleButton(eatBtn, "Food",    400, 88);
 
         GridPane grid = new GridPane();
         grid.setHgap(12);
@@ -98,15 +96,15 @@ public class GameUI extends VBox {
         this.getChildren().addAll(forfeitPane, topBar, center);
         this.setStyle("-fx-background-color: white;");
 
-        setTimeline(Action.A_T);
+        setTimeline(Action.APPLIANCES_TECHNOLOGY);
         setTimeline(Action.SERVICE);
         setTimeline(Action.TRANSPORT);
-        setTimeline(Action.EAT);
+        setTimeline(Action.FOOD);
     }
 
     private void setTimeline(Action action){
         switch (action){
-            case A_T -> {
+            case APPLIANCES_TECHNOLOGY -> {
                 appliancesAndTechnologyDrain = new Timeline(
                         new KeyFrame(Duration.seconds(0.1), e -> {
 
@@ -154,7 +152,7 @@ public class GameUI extends VBox {
                 transportDrain.play();
             }
 
-            case EAT -> {
+            case FOOD -> {
                 hungerDrain = new Timeline(
                         new KeyFrame(Duration.seconds(0.1), e -> {
 
@@ -174,19 +172,19 @@ public class GameUI extends VBox {
 
     public void startDrain(Action action) {
         switch (action) {
-            case A_T        -> appliancesAndTechnologyDrain.play();
+            case APPLIANCES_TECHNOLOGY        -> appliancesAndTechnologyDrain.play();
             case SERVICE    -> serviceDrain.play();
             case TRANSPORT  -> transportDrain.play();
-            case EAT        -> hungerDrain.play();
+            case FOOD        -> hungerDrain.play();
         }
     }
 
     public void stopDrain(Action action) {
         switch (action) {
-            case A_T        -> appliancesAndTechnologyDrain.stop();
+            case APPLIANCES_TECHNOLOGY        -> appliancesAndTechnologyDrain.stop();
             case SERVICE    -> serviceDrain.stop();
             case TRANSPORT  -> transportDrain.stop();
-            case EAT        -> hungerDrain.stop();
+            case FOOD        -> hungerDrain.stop();
         }
     }
 
@@ -200,7 +198,6 @@ public class GameUI extends VBox {
             this.playerName.setText("Player  •  $" + currentMoney);
         } else {
             createGameOver();
-            //GET A SUMMARY OF WHAT WAS LOST!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         }
 
     }
@@ -223,9 +220,9 @@ public class GameUI extends VBox {
 
     private void styleButton(Button btn, String text, double width, double height) {
         btn.setText(text);
-        btn.setFont(Font.font("Georgia", FontWeight.BOLD, 13));
+        btn.setFont(Font.font("Georgia", FontWeight.BOLD, 20));
         btn.setPrefWidth(width);
         btn.setPrefHeight(height);
-        btn.getStyleClass().add("btn");
+        MainUI.styleExitButton(btn);
     }
 }

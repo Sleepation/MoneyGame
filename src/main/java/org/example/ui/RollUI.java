@@ -25,7 +25,7 @@ public class RollUI extends VBox {
             btn.setId(String.valueOf(i));
             btn.setPrefWidth(60);
             btn.setPrefHeight(60);
-            btn.getStyleClass().add("btn");
+            MainUI.styleExitButton(btn);
 
             btn.setOnAction(setOnResultHandler);
 
@@ -37,7 +37,7 @@ public class RollUI extends VBox {
         backBtn.setFont(Font.font("Georgia", FontWeight.BOLD, 13));
         backBtn.setPrefWidth(100);
         backBtn.setPrefHeight(40);
-        backBtn.getStyleClass().add("btn");
+        MainUI.styleExitButton(backBtn);
         backBtn.setOnAction(setOnBackHandler);
 
         this.setSpacing(24);

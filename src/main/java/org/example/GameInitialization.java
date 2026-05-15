@@ -48,6 +48,7 @@ public class GameInitialization extends Application {
 
 
         primaryStage.setScene(scene);
+        primaryStage.setTitle("Money Game");
         primaryStage.show();
 
     }

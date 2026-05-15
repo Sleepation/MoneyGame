@@ -75,9 +75,20 @@ public class MainUI extends VBox {
         playBtn.setFont(Font.font("Georgia", FontWeight.BOLD, 16));
         playBtn.setPrefWidth(200);
         playBtn.setPrefHeight(48);
+        playBtn.setStyle(
+                "-fx-background-color: #9A6C00;" +
+                        "-fx-background-radius: 8;" +
+                        "-fx-text-fill: white;" +
+                        "-fx-cursor: hand;" +
+                        "-fx-effect: dropshadow(gaussian, rgba(154,108,0,0.28), 10, 0, 0, 3);"
+        );
+        stylePlayButton(playBtn);
+
+
 
         exitBtn.setFont(Font.font("Georgia", 14));
         exitBtn.setPrefWidth(200);
+        styleExitButton(exitBtn);
 
         this.setSpacing(16);
         this.setAlignment(Pos.CENTER);
@@ -94,4 +105,38 @@ public class MainUI extends VBox {
         }
         return false;
     }
+
+    public static void stylePlayButton(Button button){
+        button.setOnMouseEntered(e -> button.setStyle(
+                "-fx-background-color: #B07D00;" +
+                        "-fx-background-radius: 8;" +
+                        "-fx-text-fill: white;" +
+                        "-fx-cursor: hand;" +
+                        "-fx-effect: dropshadow(gaussian, rgba(154,108,0,0.40), 12, 0, 0, 4);"
+        ));
+        button.setOnMouseExited(e  -> button.setStyle(
+                "-fx-background-color: #9A6C00;" +
+                        "-fx-background-radius: 8;" +
+                        "-fx-text-fill: white;" +
+                        "-fx-cursor: hand;" +
+                        "-fx-effect: dropshadow(gaussian, rgba(154,108,0,0.28), 10, 0, 0, 3);"
+        ));
+    }
+
+    public static void styleExitButton(Button button){
+        button.setStyle(
+                "-fx-background-color: transparent;" +
+                        "-fx-border-color: #CCCCCC;" +
+                        "-fx-border-width: 1.5;" +
+                        "-fx-border-radius: 8;" +
+                        "-fx-background-radius: 8;" +
+                        "-fx-cursor: hand;"
+        );
+    }
+
+
+
+
+
+
 }

@@ -15,15 +15,15 @@ public class ResultUI extends VBox {
     public ResultUI(Action action, int number, double currentMoney, double currentHunger, StatBar hungerBar, EventHandler<ActionEvent> setOnBackHandler) {
 
         Label title = new Label("Result");
-        title.setFont(Font.font("Georgia", FontWeight.BOLD, 20));
+        title.setFont(Font.font("Georgia", FontWeight.BOLD, 30));
         title.setTextFill(Color.web("#9A6C00"));
 
         Label actionLabel = new Label("Action: " + action.name());
-        actionLabel.setFont(Font.font("Georgia", 14));
+        actionLabel.setFont(Font.font("Georgia", 24));
         actionLabel.setTextFill(Color.web("#555555"));
 
         Label resultLabel = new Label(ResultInfo.getInfo(action, number, hungerBar));
-        resultLabel.setFont(Font.font("Georgia", 14));
+        resultLabel.setFont(Font.font("Georgia", 20));
         resultLabel.setAlignment(Pos.CENTER);
         resultLabel.setTextFill(Color.web("#555555"));
         resultLabel.setWrapText(true);
@@ -42,7 +42,7 @@ public class ResultUI extends VBox {
         backBtn.setFont(Font.font("Georgia", FontWeight.BOLD, 13));
         backBtn.setPrefWidth(100);
         backBtn.setPrefHeight(40);
-        backBtn.getStyleClass().add("btn");
+        MainUI.styleExitButton(backBtn);
         backBtn.setOnAction(setOnBackHandler);
 
         this.setSpacing(24);

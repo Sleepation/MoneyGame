@@ -51,7 +51,7 @@ public class GameOverUI extends VBox {
         restartBtn.setFont(Font.font("Georgia", FontWeight.BOLD, 13));
         restartBtn.setPrefWidth(150);
         restartBtn.setPrefHeight(44);
-        restartBtn.getStyleClass().add("btn");
+        MainUI.styleExitButton(restartBtn);
         restartBtn.setOnAction(onRestart);
 
         this.setSpacing(20);

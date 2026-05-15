@@ -8,14 +8,14 @@ public class ResultInfo {
 
     public static String getInfo(Action action, int number, StatBar hungerBar) {
         switch (action) {
-            case A_T -> {
+            case APPLIANCES_TECHNOLOGY -> {
                 switch (number) {
-                    case 1 -> { return ResultText.A_T_1; }
-                    case 2 -> { return ResultText.A_T_2; }
-                    case 3 -> { return ResultText.A_T_3; }
-                    case 4 -> { return ResultText.A_T_4; }
-                    case 5 -> { return ResultText.A_T_5; }
-                    case 6 -> { return ResultText.A_T_6; }
+                    case 1 -> { return ResultText.APPLIANCES_TECHNOLOGY_1; }
+                    case 2 -> { return ResultText.APPLIANCES_TECHNOLOGY_2; }
+                    case 3 -> { return ResultText.APPLIANCES_TECHNOLOGY_3; }
+                    case 4 -> { return ResultText.APPLIANCES_TECHNOLOGY_4; }
+                    case 5 -> { return ResultText.APPLIANCES_TECHNOLOGY_5; }
+                    case 6 -> { return ResultText.APPLIANCES_TECHNOLOGY_6; }
                 }
             }
             case SERVICE -> {
@@ -38,20 +38,20 @@ public class ResultInfo {
                     case 6 -> { return ResultText.TRANSPORT_6; }
                 }
             }
-            case EAT -> {
+            case FOOD -> {
                 switch (number) {
                     case 1 -> { hungerBar.feed(0);
-                        return ResultText.EAT_1; }
+                        return ResultText.FOOD_1; }
                     case 2 -> { hungerBar.feed(20);
-                        return ResultText.EAT_2; }
+                        return ResultText.FOOD_2; }
                     case 3 -> { hungerBar.feed(10);
-                        return ResultText.EAT_3; }
+                        return ResultText.FOOD_3; }
                     case 4 -> { hungerBar.feed(7.5);
-                        return ResultText.EAT_4; }
+                        return ResultText.FOOD_4; }
                     case 5 -> { hungerBar.feed(10);
-                        return ResultText.EAT_5;}
+                        return ResultText.FOOD_5;}
                     case 6 -> { hungerBar.feed(20);
-                        return ResultText.EAT_6; }
+                        return ResultText.FOOD_6; }
                 }
             }
         }
@@ -59,7 +59,7 @@ public class ResultInfo {
     }
     public static double getLostMoney(Action action, int number) {
         switch (action) {
-            case A_T -> {
+            case APPLIANCES_TECHNOLOGY -> {
                 switch (number) {
                     case 1 -> { return 3000; }
                     case 2 -> { return 1500; }
@@ -89,7 +89,7 @@ public class ResultInfo {
                     case 6 -> { return 150; }
                 }
             }
-            case EAT -> {
+            case FOOD -> {
                 switch (number) {
                     case 1 -> { return 5; }
                     case 2 -> { return 60; }
@@ -105,7 +105,7 @@ public class ResultInfo {
 
     public static String getShortDescription(Action action, int number){
         switch (action) {
-            case A_T -> {
+            case APPLIANCES_TECHNOLOGY -> {
                 switch (number) {
                     case 1 -> { return "Smart Fridge"; }
                     case 2 -> { return "Newest Iphone"; }
@@ -135,7 +135,7 @@ public class ResultInfo {
                     case 6 -> { return "Bike"; }
                 }
             }
-            case EAT -> {
+            case FOOD -> {
                 switch (number) {
                     case 1 -> { return "Coffee"; }
                     case 2 -> { return "Restaurant"; }

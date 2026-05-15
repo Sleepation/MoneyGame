@@ -1,29 +1,29 @@
 package org.example.info;
 
-public class ResultText { // A_T
+public class ResultText { // APPLIANCES_TECHNOLOGY
     //Appliances and technology
-    public static final String A_T_1 = "Unfortunately, you broke your last fridge and you decided to buy a smart fridge with touchscreen and other features for 3000$\n" +
+    public static final String APPLIANCES_TECHNOLOGY_1 = "Unfortunately, you broke your last fridge and you decided to buy a smart fridge with touchscreen and other features for 3000$\n" +
             "Did you know that smart fridges cost on average 2000 to 6500$ while traditional fridges cost from 800 to 3000$?\n" +
             "Were the extra features of the smart fridge worth it?\n" +
             "Money -3000$.\n";
-    public static final String A_T_2 = "Your old phone is broken and you want to buy a new one. The newest iphone is tempting and you finally decided to buy it for 1500$. There are other alternatives for 500$ but you decided to go with Apple since it gives prestige.\n" +
+    public static final String APPLIANCES_TECHNOLOGY_2 = "Your old phone is broken and you want to buy a new one. The newest iphone is tempting and you finally decided to buy it for 1500$. There are other alternatives for 500$ but you decided to go with Apple since it gives prestige.\n" +
             "Interestingly, iPhone 17’s five models accounted for 82% of sales in Apple after it got released.\n" +
             "Do you want to be part of the 82% of sales, and do you need the newest iphone as an upgrade?\n" +
             "Money -1500$.\n";
-    public static final String A_T_3 = "You are not comfy with your chair, and you decide to buy a new one for 500$.\n" +
+    public static final String APPLIANCES_TECHNOLOGY_3 = "You are not comfy with your chair, and you decide to buy a new one for 500$.\n" +
             "However, you are not alone.\n" +
             "According to a poll conducted by Staples, 31% of people are excited to get a new office chair after a day off.\n" +
             "Do you need to pay this much on your chair? How much do you think you should pay?\n" +
             "Money -500$.\n";
-    public static final String A_T_4 = "You felt the need to track your heartrate, and you decided to go with what is popular and buy an Apple smart watch for 300$.\n" +
+    public static final String APPLIANCES_TECHNOLOGY_4 = "You felt the need to track your heartrate, and you decided to go with what is popular and buy an Apple smart watch for 300$.\n" +
             "However, you can buy for 99$, the CMF Watch 3 Pro but with less features.\n" +
             "How much are you willing to pay for a watch of this kind?\n" +
             "Money -300$\n";
-    public static final String A_T_5 = "You had a small TV, and you wanted to upgrade it. You decided to buy one for 1000$ since it gave you better quality.\n" +
+    public static final String APPLIANCES_TECHNOLOGY_5 = "You had a small TV, and you wanted to upgrade it. You decided to buy one for 1000$ since it gave you better quality.\n" +
             "Did you know that a study found that durability, picture, and sound quality (92%) as well as other specifications (80%) made people more motivated to purchase a TV instead of its price and value (39%)?\n" +
             "With the money you have right now, do you think getting an upgrade would be useful?\n" +
             "Money -1000$\n";
-    public static final String A_T_6 = "You decided to get a new computer since your old one is out of date. You paid 1000$ for it.\n" +
+    public static final String APPLIANCES_TECHNOLOGY_6 = "You decided to get a new computer since your old one is out of date. You paid 1000$ for it.\n" +
             "This makes sense to you, especially when 95% of US households have at least one computer.\n" +
             "Money -1000$. \n";
 
@@ -80,26 +80,26 @@ public class ResultText { // A_T
             "Money -150$.\n";
 
     // Food
-    public static final String EAT_1 = "You decided to buy some coffee for 5$.\nIt turned out to not be very good and you need something else to eat.\n Surprisingly, 3/4 Americans drink coffee EVERY DAY. 36% are drinking 3 to 5 cups.\n Did you really need that coffee?\nHunger 0, Money -5$";
-    public static final String EAT_2 = "You decided to go to a restaurant with some friends. You ate lasagna with olives and fried mozzarella.\n" +
+    public static final String FOOD_1 = "You decided to buy some coffee for 5$.\nIt turned out to not be very good and you need something else to eat.\n Surprisingly, 3/4 Americans drink coffee EVERY DAY. 36% are drinking 3 to 5 cups.\n Did you really need that coffee?\nHunger 0, Money -5$";
+    public static final String FOOD_2 = "You decided to go to a restaurant with some friends. You ate lasagna with olives and fried mozzarella.\n" +
             "However, according to BLogic Systems, a restaurant lasagna costs 586% more than if it was made at home.\n" +
             "Was that lasagna worth paying 586% more for a fun time with friends? Restricting this time or changing to cheaper restaurants could be helpful.\n" +
             "Hunger + 20, Money -60$\n";
-    public static final String EAT_3 = "You bought 10 chocolate bars for 20$ since you needed a sugar rush.\n" +
+    public static final String FOOD_3 = "You bought 10 chocolate bars for 20$ since you needed a sugar rush.\n" +
             "However you are not alone.\n" +
             "Canada is one of the largest chocolate consumers with average consumption per person being 6.4 kg each year which is 1 more than the US.\n" +
             "For reference, this represents about 160 chocolate bars per year\n" +
             "How much do you think it costs per year?\n" +
             "Hunger + 10, Money -20$\n";
-    public static final String EAT_4 = "You decided to buy 3 bags of chips for midnight snacks.\n" +
+    public static final String FOOD_4 = "You decided to buy 3 bags of chips for midnight snacks.\n" +
             "Interestingly, according to Statistics Canada, ultra-processed food, which includes chips and which are not the greatest for your health, contributed 45.7% of daily energy intake among Canadians.\n" +
             "Are you sure that these were needed instead of getting a cheaper and healthier option such as apples?\n" +
             "Hunger + 7.5, Money -10$\n";
-    public static final String EAT_5 = "You decided to get a McDonalds Big mac trio with UberEats.\n" +
+    public static final String FOOD_5 = "You decided to get a McDonalds Big mac trio with UberEats.\n" +
             "The average price per serving of home cooked meals is $4.31 vs 20.37$ for the price of eating out.\n" +
             "Now that you realize that fast food can be up to 5 times more expensive, do you consider eating at home more frequently?\n" +
             "Hunger +10, Money -15$\n";
-    public static final String EAT_6 = "You decided to make 3 sandwiches at home.\n" +
+    public static final String FOOD_6 = "You decided to make 3 sandwiches at home.\n" +
             "Surprisingly, food which is not cooked at home such as in restaurants are charged 3 to 4 times higher than their ingredients’ cost which makes you save 60-70% of your wallet.\n" +
             "Do you want to always eat outside, or should you learn to cook after seeing this?\n" +
             "Hunger +20, Money -10$\n";
