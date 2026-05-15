@@ -70,15 +70,14 @@ public class ResultText { // A_T
             "Interestingly, according to Statistics Canada, there were around 120000 victims from car accidents in Canada in 2023.\n" +
             "You can always enter in a situation like this, so are you willing to decrease your costs in unnecessary food, services, and transport?\n" +
             "Money -1000$\n";
-    public static final String TRANSPORT_5 = "You want a used SUV to start driving which costs 4000$.\n" +
-            "By 2021, 75% of cars sold were light trucks such as SUVs, pickup trucks, and crossovers.\n" +
-            "However, they are more expensive than sedans and cost more fuel.\n" +
-            "Are you willing to sacrifice more money for your passion for SUVs?\n" +
-            "Money -4000$.\n";
-    public static final String TRANSPORT_6 = "You want to get public transport so you buy a monthly pass for 200$.\n" +
+    public static final String TRANSPORT_5 = "You want to get public transport so you buy a monthly pass for 200$.\n" +
             "Only 15.3% of Montreal workers use public transport.\n" +
             "Do you think using your car could be more beneficial money wise? How?\n" +
             "Money -200$.\n";
+    public static final String TRANSPORT_6 = "You need transport but you want to stay healthy. So, you decided to buy a bike for 150$ and use it to travel long distances. \n" +
+            "In fact, biking is rare, as only 1.6% of people in the Greater Montreal Area bike for transportation versus 54.3% for cars.\n" +
+            "Although it’s healthier, do you think the longer time from biking is worth it versus spending more money on other transportation methods?\n" +
+            "Money -150$.\n";
 
     // Food
     public static final String EAT_1 = "You decided to buy some coffee for 5$.\nIt turned out to not be very good and you need something else to eat.\n Surprisingly, 3/4 Americans drink coffee EVERY DAY. 36% are drinking 3 to 5 cups.\n Did you really need that coffee?\nHunger 0, Money -5$";

@@ -57,7 +57,7 @@ public class MainUI extends VBox {
                 try {
                     double value = Double.parseDouble(newText);
 
-                    if (value > 0 && value < MONEY_LIMIT) { // or > 0 if strictly positive
+                    if (value > 0 && value <= MONEY_LIMIT) { // or > 0 if strictly positive
                         return change;
                     }
                 } catch (NumberFormatException ignored) {

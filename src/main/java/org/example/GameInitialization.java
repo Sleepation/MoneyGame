@@ -13,6 +13,9 @@ import org.example.buttons.ActionButton;
 import org.example.info.ResultInfo;
 import org.example.ui.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class GameInitialization extends Application {
     private GameUI gameUI;
@@ -25,6 +28,7 @@ public class GameInitialization extends Application {
     private StatBar hungerBar;
     private Scene scene;
     private static Color gray = Color.web("#555555");
+    private List<String> rollHistory = new ArrayList<>();
 
     @Override
     public void start(Stage primaryStage){
@@ -63,6 +67,10 @@ public class GameInitialization extends Application {
             reset();
             scene.setRoot(mainUI);
         });
+
+        //GAME OVER
+        gameUI.setOnGameOver(e -> showGameOver());
+
         scene.setRoot(gameUI);
     }
 
@@ -78,11 +86,29 @@ public class GameInitialization extends Application {
     }
 
     private void showResult(Action action, int id){
+
+        //Adds purchase history
+        double lost = ResultInfo.getLostMoney(action, id);
+        String entry = ResultInfo.getShortDescription(action, id) + "  →  -$" + String.format("%.2f", lost);
+        rollHistory.add(entry);
+
+
         resultUI = new ResultUI(action, id,  gameUI.getCurrentMoney(), hungerBar.getValue(), hungerBar , e -> {scene.setRoot(gameUI); gameUI.startDrain(action); gameUI.loseMoney(ResultInfo.getLostMoney(action, id));});
         scene.setRoot(resultUI);
     }
 
+
+    private void showGameOver() {
+        GameOverUI gameOverUI = new GameOverUI(gameUI.getCurrentMoney(), rollHistory, e -> {
+            rollHistory.clear();
+            reset();
+            scene.setRoot(mainUI);
+        }, gameUI.getMoneyDifference());
+        scene.setRoot(gameOverUI);
+    }
+
     private void reset(){
+        rollHistory.clear();
         appliancesAndTechnologyBar = new StatBar("Appliances & Technology", gray, gray, blueGradient());
         serviceBar                 = new StatBar("Service",                 gray, gray, greenGradient());
         transportBar               = new StatBar("Transport",               gray, gray, orangeGradient());

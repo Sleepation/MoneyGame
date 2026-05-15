@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9646e70e-5fad-4959-9ae5-f0e4002c157c" name="Changes" comment="Added other bars for other buttons">
+    <list default="true" id="9646e70e-5fad-4959-9ae5-f0e4002c157c" name="Changes" comment="Made bars go to 0 create game over">
       <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MainMenuInsaneAI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/GameOverUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameInitialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameInitialization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/info/ResultInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/info/ResultInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/info/ResultText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/info/ResultText.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/GameUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/GameUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/StatBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/StatBar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/MainUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/MainUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -143,7 +146,7 @@
       <workItem from="1778521762292" duration="3447000" />
       <workItem from="1778636722699" duration="1009000" />
       <workItem from="1778694541171" duration="6392000" />
-      <workItem from="1778797615421" duration="5501000" />
+      <workItem from="1778797615421" duration="9705000" />
     </task>
     <task id="LOCAL-00001" summary="Created basic Money Game. (Base structure works + some buttons are not clear)">
       <option name="closed" value="true" />
@@ -217,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778801328133</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Made bars go to 0 create game over">
+      <option name="closed" value="true" />
+      <created>1778807235234</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1778807235234</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,6 +254,7 @@
     <MESSAGE value="Removed lost money from ResultUI as it was not necessary" />
     <MESSAGE value="Added research text" />
     <MESSAGE value="Added other bars for other buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added other bars for other buttons" />
+    <MESSAGE value="Made bars go to 0 create game over" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made bars go to 0 create game over" />
   </component>
 </project>

@@ -33,6 +33,12 @@ public class GameUI extends VBox {
     private Button forfeitBtn = new Button();
     private EventHandler<ActionEvent> onForfeit;
     private double currentMoney = 0;
+    private double initialMoney = 0;
+    private EventHandler<ActionEvent> onGameOver;
+
+    public void setOnGameOver(EventHandler<ActionEvent> handler) {
+        onGameOver = handler;
+    }
 
     public void setOnRoll(EventHandler<ActionEvent> handler){
         appliancesAndTechnologyBtn.setOnAction(handler);
@@ -47,6 +53,7 @@ public class GameUI extends VBox {
     }
 
     public GameUI(double money, StatBar appliancesAndTechnologyBar, StatBar serviceBar, StatBar transportBar, StatBar hungerBar) {
+        initialMoney = money;
         currentMoney = money;
         // ── Top bar ──────────────────────────────────────────────────────
         this.playerName = new Label("Player  •  $" + currentMoney);
@@ -204,14 +211,15 @@ public class GameUI extends VBox {
         transportDrain.stop();
         hungerDrain.stop();
 
-        this.getChildren().clear();
-        forfeitBtn.setText("Game Over!");
-        this.getChildren().add(forfeitBtn);
-        this.setAlignment(Pos.CENTER);
+        if (onGameOver != null) {
+            onGameOver.handle(new ActionEvent());
+        }
     }
 
 
-
+    public double getMoneyDifference(){
+        return initialMoney - currentMoney;
+    }
 
     private void styleButton(Button btn, String text, double width, double height) {
         btn.setText(text);

@@ -83,8 +83,8 @@ public class ResultInfo {
                 switch (number) {
                     case 1 -> { return 6000; }
                     case 2 -> { return 5000; }
-                    case 3 -> { return 1000; }
-                    case 4 -> { return 4000; }
+                    case 3 -> { return 4000; }
+                    case 4 -> { return 1000; }
                     case 5 -> { return 200; }
                     case 6 -> { return 150; }
                 }
@@ -101,6 +101,52 @@ public class ResultInfo {
             }
         }
         return 0;
+    }
+
+    public static String getShortDescription(Action action, int number){
+        switch (action) {
+            case A_T -> {
+                switch (number) {
+                    case 1 -> { return "Smart Fridge"; }
+                    case 2 -> { return "Newest Iphone"; }
+                    case 3 -> { return "Office Chair"; }
+                    case 4 -> { return "Apple Smart Watch"; }
+                    case 5 -> { return "Television"; }
+                    case 6 -> { return "Computer"; }
+                }
+            }
+            case SERVICE -> {
+                switch (number) {
+                    case 1 -> { return "Netflix, Disney+, and Crave Subscription"; }
+                    case 2 -> { return "Sports Subscription"; }
+                    case 3 -> { return "Cellphone Plan"; }
+                    case 4 -> { return "Internet"; }
+                    case 5 -> { return "Netflix Subscription"; }
+                    case 6 -> { return "Youtube With No Subscription"; }
+                }
+            }
+            case TRANSPORT -> {
+                switch (number) {
+                    case 1 -> { return "Airplane Travel"; }
+                    case 2 -> { return "Cruise Ship Travel"; }
+                    case 3 -> { return "Used SUV"; }
+                    case 4 -> { return "Car Accident"; }
+                    case 5 -> { return "Public Transport"; }
+                    case 6 -> { return "Bike"; }
+                }
+            }
+            case EAT -> {
+                switch (number) {
+                    case 1 -> { return "Coffee"; }
+                    case 2 -> { return "Restaurant"; }
+                    case 3 -> { return "10 Chocolate Bars"; }
+                    case 4 -> { return "3 Bags of Chips"; }
+                    case 5 -> { return "McDonalds Uber Eats"; }
+                    case 6 -> { return "Sandwiches"; }
+                }
+            }
+        }
+        return null;
     }
 
 }
