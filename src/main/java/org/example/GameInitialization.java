@@ -78,7 +78,7 @@ public class GameInitialization extends Application {
     }
 
     private void showResult(Action action, int id){
-        resultUI = new ResultUI(action, id,  gameUI.getCurrentMoney(), hungerBar.getHunger(), hungerBar , e -> {scene.setRoot(gameUI); gameUI.startDrain(action); gameUI.loseMoney(ResultInfo.getLostMoney(action, id));});
+        resultUI = new ResultUI(action, id,  gameUI.getCurrentMoney(), hungerBar.getValue(), hungerBar , e -> {scene.setRoot(gameUI); gameUI.startDrain(action); gameUI.loseMoney(ResultInfo.getLostMoney(action, id));});
         scene.setRoot(resultUI);
     }
 

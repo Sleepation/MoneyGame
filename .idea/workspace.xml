@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9646e70e-5fad-4959-9ae5-f0e4002c157c" name="Changes" comment="Added research text">
+    <list default="true" id="9646e70e-5fad-4959-9ae5-f0e4002c157c" name="Changes" comment="Added other bars for other buttons">
       <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MainMenuInsaneAI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/DrainType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameInitialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameInitialization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/info/ResultInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/info/ResultInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/GameUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/GameUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/HungerBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/StatBar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/ResultUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/ResultUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/StatBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/StatBar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +143,7 @@
       <workItem from="1778521762292" duration="3447000" />
       <workItem from="1778636722699" duration="1009000" />
       <workItem from="1778694541171" duration="6392000" />
-      <workItem from="1778797615421" duration="3650000" />
+      <workItem from="1778797615421" duration="5501000" />
     </task>
     <task id="LOCAL-00001" summary="Created basic Money Game. (Base structure works + some buttons are not clear)">
       <option name="closed" value="true" />
@@ -213,7 +209,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778739608292</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added other bars for other buttons">
+      <option name="closed" value="true" />
+      <created>1778801328133</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1778801328133</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,6 +242,7 @@
     <MESSAGE value="Changed things" />
     <MESSAGE value="Removed lost money from ResultUI as it was not necessary" />
     <MESSAGE value="Added research text" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added research text" />
+    <MESSAGE value="Added other bars for other buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added other bars for other buttons" />
   </component>
 </project>

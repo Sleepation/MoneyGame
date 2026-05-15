@@ -64,7 +64,7 @@ public class StatBar extends VBox {
         refresh();
     }
 
-    public double getHunger() {
+    public double getValue() {
         return value;
     }
 

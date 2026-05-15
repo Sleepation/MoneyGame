@@ -100,22 +100,65 @@ public class GameUI extends VBox {
     private void setTimeline(Action action){
         switch (action){
             case A_T -> {
-                appliancesAndTechnologyDrain = new Timeline(new KeyFrame(Duration.seconds(0.1), e -> appliancesAndTechnologyBar.drain(0.05)));
+                appliancesAndTechnologyDrain = new Timeline(
+                        new KeyFrame(Duration.seconds(0.1), e -> {
+
+                            appliancesAndTechnologyBar.drain(0.05);
+
+                            if (appliancesAndTechnologyBar.getValue() <= 0) {
+                                createGameOver();
+                            }
+                        })
+                );
+
                 appliancesAndTechnologyDrain.setCycleCount(Animation.INDEFINITE);
                 appliancesAndTechnologyDrain.play();
             }
+
             case SERVICE -> {
-                serviceDrain = new Timeline(new KeyFrame(Duration.seconds(0.1), e -> serviceBar.drain(0.05)));
+                serviceDrain = new Timeline(
+                        new KeyFrame(Duration.seconds(0.1), e -> {
+
+                            serviceBar.drain(0.05);
+
+                            if (serviceBar.getValue() <= 0) {
+                                createGameOver();
+                            }
+                        })
+                );
+
                 serviceDrain.setCycleCount(Animation.INDEFINITE);
                 serviceDrain.play();
             }
+
             case TRANSPORT -> {
-                transportDrain = new Timeline(new KeyFrame(Duration.seconds(0.1), e -> transportBar.drain(0.05)));
+                transportDrain = new Timeline(
+                        new KeyFrame(Duration.seconds(0.1), e -> {
+
+                            transportBar.drain(0.05);
+
+                            if (transportBar.getValue() <= 0) {
+                                createGameOver();
+                            }
+                        })
+                );
+
                 transportDrain.setCycleCount(Animation.INDEFINITE);
                 transportDrain.play();
             }
+
             case EAT -> {
-                hungerDrain = new Timeline(new KeyFrame(Duration.seconds(0.1), e -> hungerBar.drain(0.05)));
+                hungerDrain = new Timeline(
+                        new KeyFrame(Duration.seconds(0.1), e -> {
+
+                            hungerBar.drain(0.05);
+
+                            if (hungerBar.getValue() <= 0) {
+                                createGameOver();
+                            }
+                        })
+                );
+
                 hungerDrain.setCycleCount(Animation.INDEFINITE);
                 hungerDrain.play();
             }
@@ -149,14 +192,22 @@ public class GameUI extends VBox {
         if (currentMoney >= 0){
             this.playerName.setText("Player  •  $" + currentMoney);
         } else {
-            this.getChildren().clear();
-            forfeitBtn.setText("Game Over!");
+            createGameOver();
             //GET A SUMMARY OF WHAT WAS LOST!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-            this.getChildren().add(forfeitBtn);
-            this.setAlignment(Pos.CENTER);
         }
 
+    }
+
+    private void createGameOver(){
+        appliancesAndTechnologyDrain.stop();
+        serviceDrain.stop();
+        transportDrain.stop();
+        hungerDrain.stop();
+
+        this.getChildren().clear();
+        forfeitBtn.setText("Game Over!");
+        this.getChildren().add(forfeitBtn);
+        this.setAlignment(Pos.CENTER);
     }
 
 
