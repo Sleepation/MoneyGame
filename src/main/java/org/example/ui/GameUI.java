@@ -106,9 +106,9 @@ public class GameUI extends VBox {
         switch (action){
             case APPLIANCES_TECHNOLOGY -> {
                 appliancesAndTechnologyDrain = new Timeline(
-                        new KeyFrame(Duration.seconds(0.1), e -> {
+                        new KeyFrame(Duration.seconds(0.01), e -> {
 
-                            appliancesAndTechnologyBar.drain(0.1);
+                            appliancesAndTechnologyBar.drain(0.03);
 
                             if (appliancesAndTechnologyBar.getValue() <= 0) {
                                 createGameOver();
@@ -122,9 +122,9 @@ public class GameUI extends VBox {
 
             case SERVICE -> {
                 serviceDrain = new Timeline(
-                        new KeyFrame(Duration.seconds(0.1), e -> {
+                        new KeyFrame(Duration.seconds(0.01), e -> {
 
-                            serviceBar.drain(0.1);
+                            serviceBar.drain(0.03);
 
                             if (serviceBar.getValue() <= 0) {
                                 createGameOver();
@@ -138,9 +138,9 @@ public class GameUI extends VBox {
 
             case TRANSPORT -> {
                 transportDrain = new Timeline(
-                        new KeyFrame(Duration.seconds(0.1), e -> {
+                        new KeyFrame(Duration.seconds(0.01), e -> {
 
-                            transportBar.drain(0.1);
+                            transportBar.drain(0.02);
 
                             if (transportBar.getValue() <= 0) {
                                 createGameOver();
@@ -154,9 +154,9 @@ public class GameUI extends VBox {
 
             case FOOD -> {
                 hungerDrain = new Timeline(
-                        new KeyFrame(Duration.seconds(0.1), e -> {
+                        new KeyFrame(Duration.seconds(0.01), e -> {
 
-                            hungerBar.drain(0.1);
+                            hungerBar.drain(0.05);
 
                             if (hungerBar.getValue() <= 0) {
                                 createGameOver();
