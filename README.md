@@ -1,4 +1,4 @@
-# BookStorage
+# MoneyGame
 
 A game about managing money.
 
